@@ -9,7 +9,6 @@ fun username(): String {
         println("Erfolgreich eingegeben")
     return name
 }
-
 fun password(): String {
     val inputPassword = System.console()?.readPassword() ?: readln()
     val pattern = PASSWORD_PATTERN.toPattern()
