@@ -10,7 +10,7 @@ fun main() {
     println(videothek.filme.joinToString("\n"))
     println()
     println(videothek.serien.joinToString("\n"))
-    println(videothek.highestRating())
+    println(videothek.highestRating(5).joinToString("\n"))
 
 }
 
