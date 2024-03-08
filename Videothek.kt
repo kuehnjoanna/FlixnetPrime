@@ -1,5 +1,9 @@
 class Videothek() {
     private val filmeUndSerien = mutableListOf<Film>()
+    val serien
+        get() = filmeUndSerien.filter { film: Film -> film is Serie  }
+    val filme
+        get() = filmeUndSerien.filter { film: Film -> film !is Serie  }
     fun add(item: Film) {
         filmeUndSerien.add(item)
     }
@@ -24,5 +28,6 @@ class Serie(name: String, genre: String, usk: Int, val staffeln: Int, val folgen
         return "${super.toString()}, Staffeln: $staffeln, Folgen: $folgen"
     }
 }
+
 
 
