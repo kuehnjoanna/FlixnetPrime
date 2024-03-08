@@ -7,7 +7,7 @@ fun main() {
 }
 
 
-val filme: MutableList<Film> = mutableListOf<Film>(
+val filme: List<Film> = listOf(
     Film("The Rock", "Action", 18),
     Film("Das letzte Einhorn", "Fantasy", 0),
     Film("Cranck", "Action", 18),
