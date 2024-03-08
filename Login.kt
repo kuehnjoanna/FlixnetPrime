@@ -20,9 +20,7 @@ fun password(): String {
     println("Passwort wurde erfolgreich eingegeben")
     return inputPassword.toString()
 }
-
-
-fun main() {
+fun requestLogin() {
     println("Bitte geben Sie Ihren Namen ein")
     username()
     println("Bitte geben Sie Ihr Passwort ein, dieses sollte mindestens 8 Zeichen beinhalten")
