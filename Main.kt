@@ -4,6 +4,8 @@ fun main() {
     videothek.add(filme)
     videothek.add(Film("Dangerous Minds", "Drama", 12))
     println(videothek)
+    println(videothek.serien)
+    println(videothek.filme)
 }
 
 
@@ -13,5 +15,4 @@ val filme: List<Film> = listOf(
     Film("Cranck", "Action", 18),
     Film("Paw Patrol", "Animation", 0),
     Serie("Sense 8", "SciFi", 18, 2, 24)
-
 )
