@@ -5,7 +5,9 @@ fun main() {
     videothek.add(Film("Dangerous Minds", "Drama", 12))
     println(videothek)
     println(videothek.serien)
+    videothek.add( Serie("Baywatch", "Komödie", 12, 2, 24))
     println(videothek.filme)
+    println(videothek.serien)
 }
 
 
