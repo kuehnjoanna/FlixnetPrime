@@ -1,15 +1,15 @@
 class Videothek() {
-    private val listen = mutableListOf<Film>()
+    private val filmeUndSerien = mutableListOf<Film>()
     fun add(item: Film) {
-        listen.add(item)
+        filmeUndSerien.add(item)
     }
 
     fun add(items: Collection<Film>) {
-        listen.addAll(items)
+        filmeUndSerien.addAll(items)
     }
 
     override fun toString(): String {
-        return listen.joinToString("\n")
+        return filmeUndSerien.joinToString("\n")
     }
 }
 
