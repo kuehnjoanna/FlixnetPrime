@@ -6,10 +6,12 @@ fun main() {
     println(videothek)
     println(videothek.serien)
     videothek.add( Serie("Baywatch", "Komödie", 12, 2, 24))
-    println(videothek.filme)
-    println(videothek.serien)
-}
+    println()
+    println(videothek.filme.joinToString("\n"))
+    println()
+    println(videothek.serien.joinToString("\n"))
 
+}
 
 val filme: List<Film> = listOf(
     Film("The Rock", "Action", 18),

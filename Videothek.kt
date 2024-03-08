@@ -1,9 +1,9 @@
 class Videothek() {
     private val filmeUndSerien = mutableListOf<Film>()
     val serien
-        get() = filmeUndSerien.filter { film: Film -> film is Serie  }
+        get() = filmeUndSerien.filter { film: Film -> film is Serie }
     val filme
-        get() = filmeUndSerien.filter { film: Film -> film !is Serie  }
+        get() = filmeUndSerien.filter { film: Film -> film !is Serie }
     fun add(item: Film) {
         filmeUndSerien.add(item)
     }
