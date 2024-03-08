@@ -17,13 +17,13 @@ class Videothek() {
     }
 }
 
-open class Film(val name: String, val genre: String, val usk: Int) {
+open class Film(val name: String, val genre: String, val usk: Int, val rating: List<Double>) {
     override fun toString(): String {
-        return "$name, Genre: $genre, USK: $usk"
+        return "$name, Genre: $genre, USK: $usk, rating: ${rating.average()}"
     }
 }
 
-class Serie(name: String, genre: String, usk: Int, val staffeln: Int, val folgen: Int) : Film(name, genre, usk) {
+class Serie(name: String, genre: String, usk: Int, rating: List<Double>, val staffeln: Int, val folgen: Int) : Film(name, genre, usk, rating) {
     override fun toString(): String {
         return "${super.toString()}, Staffeln: $staffeln, Folgen: $folgen"
     }
