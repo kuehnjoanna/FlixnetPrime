@@ -1,4 +1,3 @@
-package src
 
 const val PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\\W)(?=\\S+$).{4,}$"
 
