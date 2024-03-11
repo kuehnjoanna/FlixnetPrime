@@ -16,6 +16,22 @@ class Videothek() {
         val sortedByRating =  filmeUndSerien.sortedBy { film ->  film.rating.average() }
         return sortedByRating.slice(1..3 )
     }
+    fun randomSelection(): Film {
+        var eingabe = readln()
+        when(eingabe) {
+            "1" -> {
+                return serien.random()
+            }
+            "2" -> {
+                return filme.random()
+            }
+            "3" -> {
+                return filmeUndSerien.random()
+            }
+        }
+        println("Falsche Eingabe bitte versuchen Sie es erneut!")
+        return randomSelection()
+    }
 
     override fun toString(): String {
         return filmeUndSerien.joinToString("\n")

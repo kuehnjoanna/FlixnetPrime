@@ -11,6 +11,16 @@ fun main() {
     println(videothek.filme.joinToString("\n"))
     println()
     println(videothek.serien.joinToString("\n"))
+    println("Möchten Sie eine Auswahl von zufälligen Serien, Filmen oder allen aus unser Videothek sich anzeigen lassen?")
+    println("""
+            1 Serien
+            2 Filme
+            3 Alle
+        """.trimIndent())
+    var selection = videothek.randomSelection()
+
+    println(selection)
+//println("Sind sie mit dem Ergebnis zufrieden? ja/nein")
 
 }
 
