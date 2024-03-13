@@ -12,6 +12,11 @@ class Videothek() {
         filmeUndSerien.addAll(items)
     }
 
+    fun highestRating(count: Int = 3): Collection<Film> {
+        val sortedByRating =  filmeUndSerien.sortedByDescending { film ->  film.rating.average() }
+        return sortedByRating.slice(0..count - 1)
+    }
+
     override fun toString(): String {
         return filmeUndSerien.joinToString("\n")
     }
