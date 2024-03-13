@@ -12,10 +12,13 @@ class Videothek() {
         filmeUndSerien.addAll(items)
     }
 
-    fun highestRating(): Collection<Film> {
-        val sortedByRating =  filmeUndSerien.sortedBy { film ->  film.rating.average() }
-        return sortedByRating.slice(1..3 )
+
+    fun highestRating(count: Int = 3): Collection<Film> {
+        val sortedByRating =  filmeUndSerien.sortedByDescending { film ->  film.rating.average() }
+        return sortedByRating.slice(0..count - 1)
+
     }
+
     fun randomSelection(): Film {
         var eingabe = readln()
         when(eingabe) {
